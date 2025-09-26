@@ -1,13 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portal dos Clubes</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="app.js" defer></script>
 </head>
 <body>
-    <h1>Olá mundo</h1>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="./images/logo.png" alt="logo-site" class="logo-site">
+        </div>
+
+        <nav class="menuprincipal">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Clubes</a></li>
+                <li><a href="index.html">Sobre</a></li>
+                <li><a href="index.html">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- Barra de busca -->
+        <form class="pesquisa">
+            <input type="text" placeholder="Digite o nome do time...">
+            <button type="submit">Buscar</button>
+        </form>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Caixa de introdução -->
+        <section class="introducao">
+            <div class="banner">
+                <img src="./images/banner.png" alt="Banner principal">
+            </div>
+            <div class="texto">
+                <h1>Bem-vindo ao Portal dos Clubes</h1>
+                <p>
+                    Explore informações sobre clubes do futebol brasileiro, como sua história,
+                    conquistas, ídolos e muito mais.
+                </p>
+            </div>
+        </section>
+
+        <!-- Caixa de clubes -->
+        <section class="clubes">
+            <h2>Os três principais times da última década</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <img src="./images/escudos/Flamengo.png" alt="Escudo Flamengo">
+                    <h3>Flamengo</h3>
+                    <p>O Flamengo foi um time muito vencedor na última década, conquistando diversos títulos
+                    nacionais e internacionais.</p>
+                </div>
+
+                <div class="card">
+                    <img src="./images/escudos/Palmeiras.png" alt="Escudo Palmeiras">
+                    <h3>Palmeiras</h3>
+                    <p>O Palmeiras brilhou na última década, conquistando títulos nacionais e internacionais,
+                    incluindo a Copa Libertadores e o Brasileirão.</p>
+                </div>
+
+                <div class="card">
+                    <img src="./images/escudos/Gremio.png" alt="Escudo Grêmio">
+                    <h3>Grêmio</h3>
+                    <p>O Grêmio, conhecido como "Imortal Tricolor", também conquistou títulos importantes como
+                    a Copa Libertadores e a Copa do Brasil.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2025 Portal dos Clubes. Todos os direitos reservados.</p>
+        <p>
+            <a href="#">Instagram</a> | 
+            <a href="#">Facebook</a> | 
+            <a href="#">LinkedIn</a>
+        </p>
+    </footer>
 </body>
 </html>

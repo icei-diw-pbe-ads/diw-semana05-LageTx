@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.logo-site {
+    width: 150px;
+}
+
+/* Cabeçalho */
+header {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: lightgrey;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.menuprincipal ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menuprincipal ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 14px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.menuprincipal ul li a:hover {
+    background-color: #e3e3e3;
+    color: #07c;
+}
+
+/* Barra de busca no header */
+.pesquisa {
+    display: flex;
+    gap: 8px;
+}
+
+.pesquisa input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.pesquisa button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    background-color: gray;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pesquisa button:hover {
+    background-color: darkgray;
+}
+
+/* Conteúdo principal em duas caixas */
+main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    padding-bottom: 80px;
+}
+
+.introducao,
+.clubes {
+    flex: 1;
+    background: lightgrey;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Banner e texto */
+.banner img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.texto h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.texto p {
+    font-size: 16px;
+    color: #444;
+}
+
+/* Clubes e cards */
+.clubes h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #111;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.card {
+    background: #e0e0e0;
+    border-radius: 10px;
+    padding: 16px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: lightgrey;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+}
+
+footer p,
+footer a {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    bottom: 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/*Responsividade*/
+
+@media (max-width: 1024px) {
+    /* Ajuste do conteúdo principal em tablets */
+    main {
+        flex-direction: column;
+    }
+
+    .cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        width: 45%;
+    }
+}
+@media (max-width: 768px) {
+    /* Header em coluna no celular */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        gap: 10px;
+    }
+
+    .menuprincipal ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pesquisa {
+        width: 100%;
+    }
+
+    .pesquisa input {
+        flex: 1;
+    }
+
+    /* Cards empilhados */
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    .texto h1 {
+        font-size: 20px;
+    }
+
+    .texto p {
+        font-size: 14px;
+    }
+
+    footer p, footer a {
+        font-size: 12px;
+    }
+}
