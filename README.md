@@ -12,10 +12,10 @@ Leia o enunciado completo no Canvas.
 
 ## Informações Gerais
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Matheus Lage da Silva
+- Matricula: 903591
+- Proposta de projeto escolhida: Portal dos Clubes
+- Breve descrição sobre seu projeto: O projeto tem como ideia criar um site sobre os clubes de futebol do Brasil. Nele, será possível conhecer a Biografia(fundação, estádio, mascote, cidade, escudo), os títulos mais importantes, seus maiores ídolos e outras curiosidades. A proposta é reunir tudo de forma simples, para que estusiastas de futebol possam explorar e aprender mais sobre os clubes brasileiros.
 
 ## Print da Home-Page
 
