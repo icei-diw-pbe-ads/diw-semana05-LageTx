@@ -7,6 +7,9 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f9f9f9;
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
 }
 
 .logo-site {
@@ -42,8 +45,6 @@ header {
     background-color: #e3e3e3;
     color: #07c;
 }
-
-/* Barra de busca no header */
 .pesquisa {
     display: flex;
     gap: 8px;
@@ -76,6 +77,7 @@ main {
     gap: 20px;
     padding: 20px;
     padding-bottom: 80px;
+    flex: 1; 
 }
 
 .introducao,
@@ -130,6 +132,12 @@ main {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
 .card img {
     width: 70px;
     margin-bottom: 10px;
@@ -145,15 +153,74 @@ main {
     color: #555;
 }
 
+/* Estilos para a página de detalhes */
+.detalhe-clube {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    background: lightgrey;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detalhe-clube img.escudo-grande {
+    width: 150px;
+    height: 150px;
+}
+
+.info-clube {
+    width: 100%;
+    max-width: 600px;
+}
+
+.info-clube h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.info-clube p, .info-clube ul {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.info-clube ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Estilo para a mensagem de clube não encontrado */
+.clube-nao-encontrado {
+    width: 100%;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: lightgrey;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.clube-nao-encontrado h1 {
+    margin-bottom: 15px;
+}
+
+.clube-nao-encontrado .btn-voltar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: gray;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
 /* Rodapé */
 footer {
     text-align: center;
     padding: 20px;
     margin-top: 20px;
     background-color: lightgrey;
-    position: relative;
-    width: 100%;
-    z-index: 1000;
 }
 
 footer p,
@@ -161,7 +228,6 @@ footer a {
     font-size: 14px;
     color: #333;
     text-decoration: none;
-    bottom: 10px;
 }
 
 footer a:hover {

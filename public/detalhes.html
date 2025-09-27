@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal dos Clubes</title>
+    <link rel="icon" href="./images/logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="./images/logo.png" alt="logo-site" class="logo-site">
+            </a>
+        </div>
+
+        <nav class="menuprincipal">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Clubes</a></li>
+                <li><a href="index.html">Sobre</a></li>
+                <li><a href="index.html">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- Barra de busca -->
+        <form class="pesquisa">
+            <input type="text" placeholder="Digite o nome do time...">
+            <button type="submit">Buscar</button>
+        </form>
+    </header>
+<!-- Detalhes dos clubes-->
+ <main>
+    <section class="detalhe-clube">
+        <img src="" alt="Escudo do Clube" class="escudo-grande" id="escudo">
+        <div class="info-clube">
+            <h1 id="nome">Nome do Clube</h1>
+            <p><strong>Fundação:</strong> <span id="fundacao"></span></p>
+            <p><strong>Estádio:</strong> <span id="estadio"></span></p>
+            <p><strong>Mascote:</strong> <span id="mascote"></span></p>
+            <p><strong>Principais Títulos:</strong></p>
+            <ul id="principais_titulos"></ul>
+            <p><strong>Ídolos:</strong> <span id="idolos"></span></p>
+        </div>
+      </section>
+ </main>
+<!-- Rodapé -->
+    <footer>
+        <p>© 2025 Portal dos Clubes. Todos os direitos reservados.</p>
+        <p>
+            <a href="#">Instagram</a> | 
+            <a href="#">Facebook</a> | 
+            <a href="#">LinkedIn</a>
+        </p>
+    </footer>
+</body>
+<script src="app.js"></script>
+</html>
