@@ -131,13 +131,6 @@ main {
     text-align: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    cursor: pointer;
-}
-
 .card img {
     width: 70px;
     margin-bottom: 10px;
@@ -152,69 +145,6 @@ main {
     font-size: 14px;
     color: #555;
 }
-
-/* Estilos para a página de detalhes */
-.detalhe-clube {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    background: lightgrey;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.detalhe-clube img.escudo-grande {
-    width: 150px;
-    height: 150px;
-}
-
-.info-clube {
-    width: 100%;
-    max-width: 600px;
-}
-
-.info-clube h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.info-clube p, .info-clube ul {
-    margin-bottom: 15px;
-    line-height: 1.6;
-}
-
-.info-clube ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-/* Estilo para a mensagem de clube não encontrado */
-.clube-nao-encontrado {
-    width: 100%;
-    text-align: center;
-    padding: 40px 20px;
-    background-color: lightgrey;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.clube-nao-encontrado h1 {
-    margin-bottom: 15px;
-}
-
-.clube-nao-encontrado .btn-voltar {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: gray;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
 /* Rodapé */
 footer {
     text-align: center;
@@ -297,4 +227,45 @@ footer a:hover {
     footer p, footer a {
         font-size: 12px;
     }
+}
+
+/* --- NOVOS ESTILOS ADICIONADOS COM O USO DO JSON E MAIS --- */
+
+.card a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.card h3 {
+    font-weight: bold;
+}
+
+.card {
+    transition: transform 0.2s ease-in-out; 
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+}
+.detalhe-card {
+    background: lightgrey; 
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    width: 100%; 
+}
+
+.detalhe-escudo {
+    width: 100px; 
+}
+
+.detalhe-card ul {
+    list-style-type: none; 
+    padding-left: 0; 
+}
+#detalhes {
+    flex: 1;
+}
+.detalhe-card {
+    height: 100%; 
 }

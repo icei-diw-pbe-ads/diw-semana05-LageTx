@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="icon" href="./images/logo.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Cabeçalho -->
     <header>
@@ -31,30 +33,47 @@
             <button type="submit">Buscar</button>
         </form>
     </header>
-<!-- Detalhes dos clubes-->
- <main>
-    <section class="detalhe-clube">
-        <img src="" alt="Escudo do Clube" class="escudo-grande" id="escudo">
-        <div class="info-clube">
-            <h1 id="nome">Nome do Clube</h1>
-            <p><strong>Fundação:</strong> <span id="fundacao"></span></p>
-            <p><strong>Estádio:</strong> <span id="estadio"></span></p>
-            <p><strong>Mascote:</strong> <span id="mascote"></span></p>
-            <p><strong>Principais Títulos:</strong></p>
-            <ul id="principais_titulos"></ul>
-            <p><strong>Ídolos:</strong> <span id="idolos"></span></p>
-        </div>
-      </section>
- </main>
-<!-- Rodapé -->
+    <!-- Detalhes dos clubes-->
+    <script src="app.js"></script>
+    <main>
+        <div id="detalhes"></div>
+
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get("id");
+            const clube = clubes.find(c => c.id == id);
+
+            if (clube) {
+                document.title = `Detalhes - ${clube.nome}`; 
+                document.getElementById("detalhes").innerHTML = `
+                    <div class="detalhe-card"> 
+                        <img src="${clube.escudo}" alt="Escudo do ${clube.nome}" class="detalhe-escudo">
+                        <h1>${clube.nome}</h1>
+                        <p><strong>Fundação:</strong> ${clube.fundacao}</p>
+                        <p><strong>Estádio:</strong> ${clube.estadio}</p>
+                        <p><strong>Mascote:</strong> ${clube.mascote}</p>
+                        <h2>Principais Títulos</h2>
+                        <ul>${clube.principais_titulos.map(titulo => `<li>${titulo}</li>`).join('')}</ul>
+                        <h2>Ídolos</h2>
+                        <p>${clube.idolos.join(', ')}</p>
+                    </div>
+                `;
+            }
+
+        </script>
+
+
+
+    </main>
+    <!-- Rodapé -->
     <footer>
         <p>© 2025 Portal dos Clubes. Todos os direitos reservados.</p>
         <p>
-            <a href="#">Instagram</a> | 
-            <a href="#">Facebook</a> | 
+            <a href="#">Instagram</a> |
+            <a href="#">Facebook</a> |
             <a href="#">LinkedIn</a>
         </p>
     </footer>
 </body>
-<script src="app.js"></script>
+
 </html>

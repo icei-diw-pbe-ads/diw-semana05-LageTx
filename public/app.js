@@ -1,4 +1,4 @@
-const clubes = [
+let clubes = [
   {
     "id": 1,
     "nome": "Flamengo",
@@ -30,71 +30,22 @@ const clubes = [
     "estadio": "Arena do Grêmio",
     "mascote": "Mosqueteiro",
     "principais_titulos": ["Copa Intercontinental (1983)", "Copa Libertadores (1983, 1995, 2017)", "Campeonato Brasileiro (1981, 1996)", "Copa do Brasil (1989, 1994, 1997, 2001, 2016)"],
-    "idolos": ["Renato Gaúcho","Geromel", "Luan"]
+    "idolos": ["Renato Gaúcho", "Geromel", "Luan"]
   }
 ];
 
-document.addEventListener('DOMContentLoaded', () => {
-  const path = window.location.pathname;
+let txtHTML = '';
 
-  if (path.endsWith('/') || path.endsWith('index.html')) {
-    const cards = document.querySelectorAll('.card');
-
-    for (let i = 0; i < cards.length; i++) {
-      const card = cards[i];
-      const clubeId = card.getAttribute('data-id');
-      
-      card.addEventListener('click', () => {
-        window.location.href = `detalhes.html?id=${clubeId}`;
-      });
-    }
-  }
-
-  if (path.endsWith('detalhes.html')) {
-    const params = new URLSearchParams(window.location.search); 
-    const clubeId = params.get('id');
-    const mainContent = document.querySelector('main');
-
-    if (clubeId) {
-      const clube = clubes.find(c => c.id == clubeId);
-
-      if (clube) {
-        document.title = `Detalhes - ${clube.nome}`;
-
-        for (const chave in clube) {
-          const elemento = document.getElementById(chave);
-
-          if (elemento) {
-            const valor = clube[chave];
-            
-            if (chave === 'escudo') {
-              elemento.src = valor;
-              elemento.alt = `Escudo do ${clube.nome}`;
-            } else if (chave === 'principais_titulos') {
-              elemento.innerHTML = '';
-              valor.forEach(titulo => {
-                  const li = document.createElement('li');
-                  li.textContent = titulo;
-                  elemento.appendChild(li);
-              });
-            } else if (Array.isArray(valor)) {
-              elemento.textContent = valor.join(', ');
-            } else {
-              elemento.textContent = valor;
-            }
-          }
-        }
-      } else {
-        mainContent.innerHTML = `
-          <div class="clube-nao-encontrado">
-            <h1>Clube não encontrado</h1>
-            <p>O clube que você está tentando acessar não existe ou a URL está incorreta.</p>
-            <a href="index.html" class="btn-voltar">Voltar para a página inicial</a>
-          </div>
-        `;
-      }
-    } else {
-      mainContent.innerHTML = `<div class="clube-nao-encontrado"><h1>Nenhum clube selecionado.</h1><a href="index.html" class="btn-voltar">Voltar para a página inicial</a></div>`;
-    }
-  }
-});
+for (let i = 0; i < clubes.length; i++) {
+  let clube = clubes[i];
+  txtHTML += `
+    <div class="card">
+      <a href="detalhes.html?id=${clube.id}">
+        <img src="${clube.escudo}" alt="Escudo do ${clube.nome}">
+        <h3>${clube.nome}</h3>
+        <p>${clube.descricao_curta}</p>
+      </a>
+    </div>
+  `;
+}
+document.getElementById('cards-container').innerHTML = txtHTML;

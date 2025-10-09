@@ -19,16 +19,16 @@ Leia o enunciado completo no Canvas.
 
 ## Print da Home-Page
 
-![Print home-page](./public/images/prints-documentacao/print-card-selecionado.png)
+![Print home-page](./public/images/prints-documentacao/home-page.png)
 
 ## Print da página de detalhes do item
 
-![Print página detalhes](./public/images/prints-documentacao/print-detalhes.png)
+![Print página detalhes](./public/images/prints-documentacao/pagina-detalhes.png)
 
 ## Cole aqui abaixo a estrutura JSON utilizada no app.js
 
 ```javascript
-const clubes = [
+let clubes = [
   {
     "id": 1,
     "nome": "Flamengo",
@@ -60,6 +60,6 @@ const clubes = [
     "estadio": "Arena do Grêmio",
     "mascote": "Mosqueteiro",
     "principais_titulos": ["Copa Intercontinental (1983)", "Copa Libertadores (1983, 1995, 2017)", "Campeonato Brasileiro (1981, 1996)", "Copa do Brasil (1989, 1994, 1997, 2001, 2016)"],
-    "idolos": ["Renato Gaúcho","Geromel", "Luan"]
+    "idolos": ["Renato Gaúcho", "Geromel", "Luan"]
   }
 ];
